@@ -13,6 +13,9 @@
             android:name=".Dashboard"
             android:label="@string/title_activity_dashboard"></activity>
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".intoslider">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
