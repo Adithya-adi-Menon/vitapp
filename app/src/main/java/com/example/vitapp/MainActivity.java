@@ -29,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
         phone=(TextInputLayout) findViewById(R.id.mobileno);
 
 
-
     }
-
-
 
 }
