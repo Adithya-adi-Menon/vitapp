@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button register;
     user_db user;
     DatabaseReference reff;
+    //hello
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
