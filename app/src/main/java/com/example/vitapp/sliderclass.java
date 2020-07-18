@@ -25,15 +25,15 @@ public class sliderclass {
         this.image = image;
     }
 
-    public String getDescription() {
+    public String getDescription1() {
         return description;
     }
 
-    public String getTitle() {
+    public String getTitle1() {
         return title;
     }
 
-    public int getImage() {
+    public int getImage1() {
         return image;
     }
 }
