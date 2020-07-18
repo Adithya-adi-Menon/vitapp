@@ -8,14 +8,18 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-   TextInputLayout name,regno,phone;
+   TextInputEditText name,regno,phone;
     Button register;
     user_db user;
-
+    DatabaseReference reff;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +28,30 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        name= (TextInputLayout) findViewById(R.id.name);
-        regno=(TextInputLayout) findViewById(R.id.regno);
-        phone=(TextInputLayout) findViewById(R.id.mobileno);
+        name= (TextInputEditText) findViewById(R.id.name);
+        regno=(TextInputEditText) findViewById(R.id.regno);
+        phone=(TextInputEditText) findViewById(R.id.mobileno);
+        register=(Button) findViewById(R.id.register);
+        reff = FirebaseDatabase.getInstance().getReference().child("User");
+        user = new user_db();
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                insert();
+            }
+        });
+
+
+    }
+    private void insert()
+    {
+       Long phne =Long.parseLong(phone.getText().toString().trim());
+       user.setName(name.getText().toString().trim());
+       user.setRegno(regno.getText().toString().trim());
+       user.setPhone(phne);
+
+       reff.push().setValue(user);
+        Toast.makeText(MainActivity.this, "Inserted Succesfully", Toast.LENGTH_SHORT).show();
 
 
     }

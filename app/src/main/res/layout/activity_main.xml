@@ -40,7 +40,7 @@
         android:background="@drawable/text" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name"
+
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
@@ -50,6 +50,7 @@
         android:hint="Name ">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
             android:layout_width="281dp"
             android:layout_height="42dp"
             android:maxLines="1"
@@ -61,7 +62,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/regno"
+
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="330dp"
@@ -69,6 +70,7 @@
         android:hint=" Register No">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
@@ -79,7 +81,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobileno"
+
         android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="410dp"
@@ -87,6 +89,7 @@
         android:hint="  Mobile No">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobileno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="1"
