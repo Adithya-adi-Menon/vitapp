@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "822263113623",
+    "firebase_url": "https://vitapp-ea219.firebaseio.com",
+    "project_id": "vitapp-ea219",
+    "storage_bucket": "vitapp-ea219.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822263113623:android:4292282f98383506e6c6d2",
+        "android_client_info": {
+          "package_name": "com.example.vitapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822263113623-brns1gif2nj77u63i4plpku3rrsi0tmi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAazp4dtcvEZepwzjqjzntCpfmW7MWheN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822263113623-brns1gif2nj77u63i4plpku3rrsi0tmi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
