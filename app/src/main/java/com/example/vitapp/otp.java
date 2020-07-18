@@ -33,8 +33,8 @@ public class otp extends AppCompatActivity {
         setContentView(R.layout.activity_otp);
         otpcol=(EditText)findViewById(R.id.otpcol);
         mAuth=FirebaseAuth.getInstance();
-        String phne=getIntent().getStringExtra("phonenumber");
-        sendVerificationCode(phne);
+        String phnumber=getIntent().getStringExtra("phonenumber");
+        sendVerificationCode(phnumber);
         findViewById(R.id.otp).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,6 +106,7 @@ public class otp extends AppCompatActivity {
         public void onVerificationFailed(@NonNull FirebaseException e) {
 
             Toast.makeText(otp.this, "Failed", Toast.LENGTH_SHORT).show();
+
         }
     };
 
