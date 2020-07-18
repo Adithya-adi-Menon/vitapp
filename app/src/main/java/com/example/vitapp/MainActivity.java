@@ -9,8 +9,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 public class MainActivity extends AppCompatActivity {
-    EditText name,regno,phone;
+   TextInputLayout name,regno,phone;
     Button register;
     user_db user;
 
@@ -22,15 +24,10 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        name=(EditText)findViewById(R.id.name);
-        regno=(EditText)findViewById(R.id.regno);
-        phone=(EditText)findViewById(R.id.mobileno);
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                insert();
-            }
-        });
+        name= (TextInputLayout) findViewById(R.id.name);
+        regno=(TextInputLayout) findViewById(R.id.regno);
+        phone=(TextInputLayout) findViewById(R.id.mobileno);
+
 
 
     }

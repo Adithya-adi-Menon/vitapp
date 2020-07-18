@@ -49,9 +49,9 @@ class ViewPageFragmentAdapter extends RecyclerView.Adapter<ViewPageFragmentAdapt
 
         }
        void setonboarding(sliderclass sliderclass){
-            title.setText(sliderclass.getTitle());
-            decrip.setText(sliderclass.getDescription());
-            image.setImageResource(sliderclass.getImage());
+            title.setText(sliderclass.getTitle1());
+            decrip.setText(sliderclass.getDescription1());
+            image.setImageResource(sliderclass.getImage1());
        }
     }
 }
