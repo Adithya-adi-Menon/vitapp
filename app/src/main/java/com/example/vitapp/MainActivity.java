@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-//                insert();
+                //insert();
 
                String phnumber =phone.toString().trim();
                if(phnumber.isEmpty())

@@ -15,6 +15,7 @@
         android:layout_marginBottom="172dp"
         android:background="@android:color/transparent"
         android:paddingLeft="18dp"
+        app:backgroundTint="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.754"
