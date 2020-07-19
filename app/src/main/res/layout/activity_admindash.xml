@@ -1,9 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/icyblue"
     tools:context=".admindash">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="215dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:id="@+id/coronastat"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/rest"
+                                    android:layout_centerInParent="true"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/coronastat"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Restaurant"
+                                    android:textSize="16sp" />
+
+                                <Button
+                                    android:id="@+id/coronastatusdashboard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    app:backgroundTint="@android:color/transparent" />
+
+
+
+
+                            </RelativeLayout>
+
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:id="@+id/passe"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/qr"
+                                    android:layout_centerInParent="true"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="33dp"
+                                    android:layout_below="@+id/passe"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:gravity="center"
+                                    android:text="Qr"
+                                    android:textSize="16sp" />
+
+                                <Button
+                                    android:id="@+id/epassdash"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+                                    app:backgroundTint="@android:color/transparent" />
+
+
+
+
+                            </RelativeLayout>
+
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="135dp"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:id="@+id/docappoint"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/doctor"
+                                    android:layout_centerInParent="true"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Doctor"
+                                    android:textSize="16sp"
+                                    android:layout_below="@+id/docappoint"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"/>
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/doctordashboard"
+                                    android:background="@android:color/transparent"/>
+
+
+
+
+                            </RelativeLayout>
+
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="5dp"
+                            app:cardElevation="6dp"
+                            app:cardCornerRadius="12dp"
+
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:id="@+id/mdic"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/drugstore"
+                                    android:layout_centerInParent="true"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="33dp"
+                                    android:layout_below="@+id/mdic"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Medical Store"
+                                    android:gravity="center"
+                                    android:textSize="16sp" />
+
+                                <Button
+                                    android:layout_width="match_parent"
+                                    android:background="@android:color/transparent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/medicdashboard"/>
+
+
+
+
+                            </RelativeLayout>
+
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>
