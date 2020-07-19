@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //insert();
 
-               String phnumber =phone.toString().trim();
+               String phnumber =phone.getText().toString().trim();
                if(phnumber.isEmpty())
                {
                    phone.setError("Number is required");

@@ -105,7 +105,7 @@ public class otp extends AppCompatActivity {
         @Override
         public void onVerificationFailed(@NonNull FirebaseException e) {
 
-            Toast.makeText(otp.this, "Failed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(otp.this,e.getMessage(), Toast.LENGTH_SHORT).show();
 
         }
     };
