@@ -1,5 +1,6 @@
 package com.example.vitapp.ui.notifications;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,10 +15,13 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.vitapp.MainActivity;
+import com.example.vitapp.MainActivitydash;
 import com.example.vitapp.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class profileFragment extends Fragment {
-  Button btn;
+  Button logout;
 
     private NotificationsViewModel notificationsViewModel;
 
@@ -27,11 +31,15 @@ public class profileFragment extends Fragment {
                 ViewModelProviders.of(this).get(NotificationsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
        // final TextView textView = root.findViewById(R.id.text_notifications);
-        btn=root.findViewById(R.id.logout);
-        btn.setOnClickListener(new View.OnClickListener() {
+
+        logout=root.findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("Button Pressed","Pressed Logout");
+                FirebaseAuth.getInstance().signOut();
+               Intent intent =new Intent(profileFragment.this, MainActivity.class);
+               intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
         });
         notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {

@@ -17,6 +17,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivitydash extends AppCompatActivity {
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MainActivitydash extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
-    }
 
+
+    }
 }
