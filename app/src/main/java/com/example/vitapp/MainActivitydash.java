@@ -32,15 +32,14 @@ public class MainActivitydash extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-//      findViewById(R.id.Logout).
-//        setOnClickListener(new View.OnClickListener() {
+//        Button btn =(Button)findViewById(R.id.logout);
+//        btn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-////                FirebaseAuth.getInstance().signOut();
-////                Intent intent =new Intent(MainActivitydash.this,MainActivity.class);
-////                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
-////                startActivity(intent);
-//
+//                FirebaseAuth.getInstance().signOut();
+//                Intent intent =new Intent(MainActivitydash.this,MainActivity.class);
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                startActivity(intent);
 //            }
 //        });
     }
