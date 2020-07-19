@@ -41,9 +41,23 @@ public class MainActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //insert();
+                insert();
 
                String phnumber =phone.getText().toString().trim();
+               String reg=regno.getText().toString().trim();
+               String nme=name.getText().toString().trim();
+               if(reg.isEmpty())
+               {
+                   regno.setError("Name is required");
+                   regno.requestFocus();
+                   return;
+               }
+               if(nme.isEmpty())
+               {
+                   name.setError("Register number required");
+                   name.requestFocus();
+                   return;
+               }
                if(phnumber.isEmpty())
                {
                    phone.setError("Number is required");
@@ -59,21 +73,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-//    private void insert()
-//    {
-//       Long phne =Long.parseLong(phone.getText().toString().trim());
-//       user.setName(name.getText().toString().trim());
-//       user.setRegno(regno.getText().toString().trim());
-//       user.setPhone(phne);
-//
-//
-//       reff.push().setValue(user);
-//        Toast.makeText(MainActivity.this, "Inserted Succesfully", Toast.LENGTH_SHORT).show();
-////
-////        Intent intent =new Intent(MainActivity.this,otp.class);
-//////        intent.putExtra("phonenumber",phne);
-////        startActivity(intent);
-//    }
+    private void insert()
+    {
+       Long phne =Long.parseLong(phone.getText().toString().trim());
+       user.setName(name.getText().toString().trim());
+       user.setRegno(regno.getText().toString().trim());
+       user.setPhone(phne);
+
+
+       reff.push().setValue(user);
+        Toast.makeText(MainActivity.this, "Inserted Succesfully", Toast.LENGTH_SHORT).show();
+
+     Intent intent =new Intent(MainActivity.this,otp.class);
+        intent.putExtra("phonenumber",phne);
+       startActivity(intent);
+    }
 
     @Override
     protected void onStart() {
