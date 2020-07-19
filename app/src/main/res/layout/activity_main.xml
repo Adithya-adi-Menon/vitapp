@@ -1,83 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#F4F4F4"
     android:layout_height="match_parent"
-    android:background="@drawable/reg"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/rec1" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/illustration" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonround"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="30dp"
+        app:srcCompat="@drawable/rec2" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        android:layout_width="300dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="50dp"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="#00ACC1"
+       android:textColorHint="#C4C6C8"
+        android:hint=" Name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:textColor="#272E2D"
+            android:drawableLeft="@drawable/ic_baseline_accessibility_24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Reg No"
+        android:layout_marginTop="430dp"
+        android:layout_marginLeft="50dp"
+        app:boxStrokeColor="#00ACC1"
+        android:textColorHint="#C4C6C8"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/regno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_favorite_24"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:textColor="#FF272E2D"
+            android:singleLine="true"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Mobile No"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="520dp"
+        app:boxStrokeColor="#00ACC1"
+        android:textColorHint="#C4C6C8"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mobileno"
+            android:layout_width="match_parent"
+            android:drawableLeft="@drawable/ic_baseline_message_24"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:textColor="#FF272E2D"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="156dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="230dp"
+        android:fontFamily="monospace"
+        android:text="Signup"
+        android:textColor="#ABEA5E13"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/register"
-        android:layout_width="154dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="216dp"
-        android:background="@android:color/transparent"
-        android:paddingLeft="18dp"
-        app:backgroundTint="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.708"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="138dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="650dp"
+        android:text="Signup"
+        android:textColor="#63FB0303"
+        android:background="#CFF5EA"
+        app:backgroundTint="#FFFFFF" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/mobileno"
-        android:layout_width="278dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="72dp"
-        android:imeOptions="actionNext"
-        android:maxLines="1"
-        android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.654"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/regno"
-        android:layout_width="265dp"
-        android:layout_height="35dp"
-
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="44dp"
-        android:imeOptions="actionNext"
-        android:maxLines="1"
-        android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/mobileno"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/name"
-        android:layout_width="265dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="344dp"
-
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="1dp"
-        android:imeOptions="actionNext"
-        android:maxLines="1"
-        android:singleLine="true"
-        app:layout_constraintBottom_toTopOf="@+id/regno"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.671"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
 
