@@ -38,51 +38,51 @@ public class MainActivity extends AppCompatActivity {
         register=(Button) findViewById(R.id.register);
         reff = FirebaseDatabase.getInstance().getReference().child("User");
         user = new user_db();
-        register.setOnClickListener(new View.OnClickListener() {
-            @Override
+    register.setOnClickListener(new View.OnClickListener() {
+          @Override
             public void onClick(View view) {
-                insert();
+               insert();
 
                String phnumber =phone.getText().toString().trim();
-               String reg=regno.getText().toString().trim();
+              String reg=regno.getText().toString().trim();
                String nme=name.getText().toString().trim();
                if(reg.isEmpty())
-               {
-                   regno.setError("Name is required");
-                   regno.requestFocus();
-                   return;
-               }
-               if(nme.isEmpty())
-               {
-                   name.setError("Register number required");
-                   name.requestFocus();
-                   return;
-               }
-               if(phnumber.isEmpty())
+              {
+                  regno.setError("Name is required");
+                  regno.requestFocus();
+                  return;
+              }
+              if(nme.isEmpty())
+              {
+                 name.setError("Register number required");
+                  name.requestFocus();
+                  return;
+              }
+              if(phnumber.isEmpty())
                {
                    phone.setError("Number is required");
-                   phone.requestFocus();
-                   return;
-               }
-               Intent intent =new Intent(MainActivity.this,otp.class);
-                intent.putExtra("phonenumber",phnumber);
-                startActivity(intent);
-
+                  phone.requestFocus();
+                  return;
             }
-        });
+            Intent intent =new Intent(MainActivity.this,otp.class);
+              intent.putExtra("phonenumber",phnumber);
+               startActivity(intent);
+
+           }
+       });
 
 
     }
-    private void insert()
-    {
+  private void insert()
+  {
        Long phne =Long.parseLong(phone.getText().toString().trim());
        user.setName(name.getText().toString().trim());
        user.setRegno(regno.getText().toString().trim());
        user.setPhone(phne);
 
 
-       reff.push().setValue(user);
-        Toast.makeText(MainActivity.this, "Inserted Succesfully", Toast.LENGTH_SHORT).show();
+      reff.push().setValue(user);
+       Toast.makeText(MainActivity.this, "Inserted Succesfully", Toast.LENGTH_SHORT).show();
 
      Intent intent =new Intent(MainActivity.this,otp.class);
         intent.putExtra("phonenumber",phne);

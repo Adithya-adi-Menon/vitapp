@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/icyblue"
+
     tools:context=".admindash">
 
     <ScrollView
@@ -171,7 +171,7 @@
                                     android:layout_width="50dp"
                                     android:id="@+id/docappoint"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/doctor"
+                                    android:src="@drawable/scan"
                                     android:layout_centerInParent="true"/>
 
                                 <TextView
@@ -219,7 +219,7 @@
                                     android:layout_width="50dp"
                                     android:id="@+id/mdic"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/drugstore"
+                                    android:src="@drawable/right"
                                     android:layout_centerInParent="true"/>
 
                                 <TextView
