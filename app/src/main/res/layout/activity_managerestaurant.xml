@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".managerestaurant">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="290dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="60dp"
+        app:srcCompat="@drawable/fastfood" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Restaurent name"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="50dp"
+        app:boxStrokeColor="#448AFF"
+
+        android:textColorHint="#C4C6C8"
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="#536DFE"
+            android:singleLine="true"
+            />
+    <requestFocus/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="460dp"
+        android:layout_marginLeft="118dp"
+        android:textColor="@color/white"
+        android:text="Add Restaurent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="333dp"
+        android:layout_height="106dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="580dp"
+        android:fontFamily="monospace"
+        android:textColor="#C4C6C8"
+        android:gravity="center_horizontal"
+        android:text="Add your Restaurent and this adds your restaurent name in the database.This can help you to create a unique QR code "
+        android:textAlignment="center"
+        android:textSize="18dp" />
+</RelativeLayout>

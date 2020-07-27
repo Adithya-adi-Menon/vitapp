@@ -46,11 +46,12 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="64dp"
-        android:background="#FBFAFA"
+        android:background="#FDD835"
         android:text="Get Started"
         android:textColor="#00897B"
 
         android:visibility="invisible"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
