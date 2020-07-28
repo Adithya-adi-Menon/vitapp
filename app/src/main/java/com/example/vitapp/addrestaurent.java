@@ -27,7 +27,7 @@ public class addrestaurent extends AppCompatActivity {
         name=(TextInputEditText) findViewById(R.id.name);
         FirebaseApp.initializeApp(this);
         refer1= FirebaseDatabase.getInstance().getReference().child("AdminQR");
-        user1=new user_db();
+       // user1=new user_db();
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,8 +36,9 @@ public class addrestaurent extends AppCompatActivity {
                   Toast.makeText(addrestaurent.this,"Name cannot be empty",Toast.LENGTH_LONG).show();
               }else {
 
-               user1.setName(nameres);
-               refer1.push().setValue(user1);
+               //user1.setName(nameres);
+               refer1.setValue(nameres);
+               Toast.makeText(addrestaurent.this,"Restaurent added",Toast.LENGTH_LONG).show();
 
               }
 
