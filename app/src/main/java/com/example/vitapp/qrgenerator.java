@@ -15,11 +15,17 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.ByteArrayOutputStream;
 
 import androidmads.library.qrgenearator.QRGContents;
 import androidmads.library.qrgenearator.QRGEncoder;
@@ -28,11 +34,15 @@ import androidmads.library.qrgenearator.QRGSaver;
 public class qrgenerator extends AppCompatActivity {
     DatabaseReference reference;
     Button generate;
+    ByteArrayOutputStream byteArrayOutputStream;
     Button save;
+    String imagename;
+
     ImageView qr;
     String savePath = Environment.getExternalStorageDirectory().getPath() + "/QRCode/";
     QRGEncoder qrgEncoder;
     Bitmap bitmap;
+    Bitmap savebitmap;
    // String value;
     String name;
     @Override
@@ -80,8 +90,24 @@ public class qrgenerator extends AppCompatActivity {
 
                         qr.setImageBitmap(bitmap);
                         qr.setVisibility(View.VISIBLE);
+                        byteArrayOutputStream=new ByteArrayOutputStream();
+                        bitmap.compress(Bitmap.CompressFormat.JPEG,100,byteArrayOutputStream);
+                        imagename=name+".jpg";
+                        UploadTask uploadTask= FirebaseStorage.getInstance().getReference().child("qr images").child(imagename).putBytes(byteArrayOutputStream.toByteArray());
+                                    uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                        @Override
+                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                            Toast.makeText(qrgenerator.this,"Generated QR",Toast.LENGTH_LONG).show();
+                                        }
+                                    });
+                                    uploadTask.addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(qrgenerator.this,e.getLocalizedMessage(),Toast.LENGTH_LONG).show();
+                                            Log.i("Err",e.toString());
 
-
+                                        }
+                                    });
                     }catch (Exception e){
                         Toast.makeText(qrgenerator.this,e.getLocalizedMessage(),Toast.LENGTH_LONG).show();
                     }
